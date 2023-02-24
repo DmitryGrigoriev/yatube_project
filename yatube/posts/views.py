@@ -5,8 +5,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Привет, ты на главной странице")
+    """Функция для отображения сообщения на главной странице."""
+
+    template = 'posts/index.html'
+    return render(request, template)
 
 
 def group_post(request, slug):
-    return HttpResponse(f"Ты на странице {slug}")
+    """Функция для отображения сообщения для страницы группы."""
+
+    return HttpResponse(f'Ты на странице {slug}')
