@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 
@@ -14,4 +13,5 @@ def index(request):
 def group_post(request, slug):
     """Функция для отображения сообщения для страницы группы."""
 
-    return HttpResponse(f'Ты на странице {slug}')
+    template = 'posts/group_list.html'
+    return render(request, template)
