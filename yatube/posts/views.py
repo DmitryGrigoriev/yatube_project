@@ -20,7 +20,7 @@ def group_post(request, slug):
     """Функция для отображения сообщения для страницы группы."""
 
     group = get_object_or_404(Group, slug=slug)
-    posts = Post.object.filter(group=group).order_by('-pub_date')[:10]
+    posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
 
     context = {
         'group': group,
