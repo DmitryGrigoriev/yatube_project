@@ -1,6 +1,7 @@
 <!-- templates/posts/group_list.html -->
 {% extends 'base.html' %}
 {% block content %}
+  <title>Записи группы {{ group.title }}</title>
   <h1>{{ group.title }}</h1>
   <p>{{ group.description }}</p>
   {% for post in posts%}
